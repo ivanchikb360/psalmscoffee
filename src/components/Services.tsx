@@ -28,6 +28,22 @@ export default function Services() {
             >
               An elegant experience, crafted with quality coffee
             </motion.h2>
+
+            {/* CTA Button - Desktop only (under text) */}
+            <motion.div
+              className="hidden lg:block"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              viewport={{ once: true }}
+            >
+              <a
+                href="#book"
+                className="inline-block px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 bg-amber-900 text-white hover:bg-amber-900/90 transition-colors font-medium text-base sm:text-lg tracking-wide"
+              >
+                BOOK US!
+              </a>
+            </motion.div>
           </motion.div>
 
           {/* Right Column - Service Images */}
@@ -106,9 +122,9 @@ export default function Services() {
               </motion.div>
             </div>
 
-            {/* CTA Button */}
+            {/* CTA Button - Mobile/Tablet only (under images) */}
             <motion.div
-              className="text-center lg:text-left"
+              className="text-center lg:hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
