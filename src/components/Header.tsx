@@ -51,7 +51,7 @@ export default function Header() {
           >
             <Image
               src="/images/logo cut.jpg"
-              alt="Psalms Coffee"
+              alt="Psalms Coffee - Mobile Specialty Coffee Cart Logo"
               width={200}
               height={100}
               className="object-contain h-12 sm:h-16 md:h-20 w-auto"

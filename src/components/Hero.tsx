@@ -8,6 +8,7 @@ export default function Hero() {
       id="home"
       className="min-h-screen flex items-center justify-start bg-cover bg-center bg-no-repeat relative px-4 sm:px-6 md:px-8 lg:px-12"
       style={{ backgroundImage: 'url("/images/coffee cart placeholder.jpg")' }}
+      aria-label="Hero section featuring Psalms Coffee mobile specialty coffee cart"
     >
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-black/65 md:bg-black/50"></div>

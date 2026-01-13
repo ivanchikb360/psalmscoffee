@@ -51,7 +51,7 @@ export default function About() {
               <div className="relative w-full aspect-square max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:w-96 lg:h-96 mx-auto lg:mx-0 rounded-2xl sm:rounded-3xl md:rounded-full overflow-hidden shadow-lg sm:shadow-xl md:shadow-2xl ring-1 sm:ring-2 md:ring-4 ring-stone-50">
                 <Image
                   src="/images/coffee cart placeholder.jpg"
-                  alt="Psalms Coffee Cart"
+                  alt="Elegant mobile coffee cart setup by Psalms Coffee at a wedding event, featuring specialty coffee service"
                   width={600}
                   height={600}
                   className="w-full h-full object-cover"

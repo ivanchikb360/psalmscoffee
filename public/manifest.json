@@ -1,0 +1,22 @@
+{
+  "name": "Psalms Coffee - Mobile Specialty Coffee Cart",
+  "short_name": "Psalms Coffee",
+  "description": "Premium mobile specialty coffee cart service for weddings, corporate events, and celebrations in the Salem Metro Area",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#78350f",
+  "icons": [
+    {
+      "src": "/images/logo cut.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/images/logo cut.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
+

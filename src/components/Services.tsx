@@ -50,7 +50,7 @@ export default function Services() {
                 <div className="bg-amber-100 rounded-xl sm:rounded-2xl h-64 sm:h-72 md:h-80 lg:h-96 overflow-hidden">
                   <Image
                     src="/images/espresso drink.jpg"
-                    alt="Espresso"
+                    alt="Premium espresso drinks served at weddings and events by Psalms Coffee mobile cart"
                     width={600}
                     height={420}
                     className="w-full h-full object-cover"
@@ -72,7 +72,7 @@ export default function Services() {
                 <div className="bg-green-100 rounded-xl sm:rounded-2xl h-64 sm:h-72 md:h-80 lg:h-96 flex items-center justify-center overflow-hidden">
                   <Image
                     src="/images/specialty drink.jpg"
-                    alt="Specialty"
+                    alt="Specialty coffee drinks including lattes, cappuccinos, and custom beverages from Psalms Coffee"
                     width={600}
                     height={420}
                     className="w-full h-full object-cover"
@@ -94,7 +94,7 @@ export default function Services() {
                 <div className="bg-blue-100 rounded-xl sm:rounded-2xl h-64 sm:h-72 md:h-80 lg:h-96 flex items-center justify-center overflow-hidden">
                   <Image
                     src="/images/fast service.jpg"
-                    alt="Fast & High Quality Service"
+                    alt="Fast and high-quality coffee service at events with professional baristas from Psalms Coffee"
                     width={600}
                     height={420}
                     className="w-full h-full object-cover"

@@ -16,7 +16,7 @@ const playfairDisplay = Playfair_Display({
 const libreBaskerville = Libre_Baskerville({
   variable: "--font-libre-baskerville",
   subsets: ["latin"],
-  weight: ["400", "700"]
+  weight: ["400", "700"],
 });
 
 const ivyProstoDisplay = localFont({
@@ -26,9 +26,85 @@ const ivyProstoDisplay = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Psalms Coffee - Where Every Cup Tells a Story",
+  metadataBase: new URL("https://psalmscoffee.com"), // Update with your actual domain
+  title: {
+    default:
+      "Psalms Coffee - Mobile Specialty Coffee Cart for Weddings & Events",
+    template: "%s | Psalms Coffee",
+  },
   description:
-    "Experience exceptional coffee, warm community, and genuine connection at Psalms Coffee. Serving fair trade coffee with a heart for faith and fellowship.",
+    "Premium mobile coffee cart service for weddings, corporate events, and celebrations in the Salem Metro Area. Specialty espresso drinks, fast service, and elegant presentation. Book your event today!",
+  keywords: [
+    "mobile coffee cart",
+    "wedding coffee service",
+    "event coffee catering",
+    "specialty coffee Salem",
+    "mobile espresso bar",
+    "coffee cart rental",
+    "wedding coffee bar",
+    "corporate event coffee",
+    "Salem Metro Area coffee",
+    "specialty coffee catering",
+  ],
+  authors: [{ name: "Psalms Coffee" }],
+  creator: "Psalms Coffee",
+  publisher: "Psalms Coffee",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  manifest: "/manifest.json",
+  themeColor: "#78350f",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Psalms Coffee",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://psalmscoffee.com", // Update with your actual domain
+    siteName: "Psalms Coffee",
+    title: "Psalms Coffee - Mobile Specialty Coffee Cart for Weddings & Events",
+    description:
+      "Premium mobile coffee cart service for weddings, corporate events, and celebrations in the Salem Metro Area. Specialty espresso drinks, fast service, and elegant presentation.",
+    images: [
+      {
+        url: "/images/coffee cart placeholder.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Psalms Coffee mobile coffee cart at a wedding event",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psalms Coffee - Mobile Specialty Coffee Cart",
+    description:
+      "Premium mobile coffee cart service for weddings, corporate events, and celebrations in the Salem Metro Area.",
+    images: ["/images/coffee cart placeholder.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    // Add your verification codes when available
+    // google: "your-google-verification-code",
+    // yandex: "your-yandex-verification-code",
+    // bing: "your-bing-verification-code",
+  },
+  alternates: {
+    canonical: "https://psalmscoffee.com", // Update with your actual domain
+  },
 };
 
 export default function RootLayout({
