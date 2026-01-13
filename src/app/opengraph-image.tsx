@@ -59,7 +59,7 @@ export default function OpenGraphImage() {
             }}
           >
             <img
-              src="https://psalmscoffee.vercel.app/images/psalms-coffee-logo.jpg"
+              src="/images/psalms-coffee-logo.png"
               alt="Psalms Coffee"
               style={{
                 width: 900,
