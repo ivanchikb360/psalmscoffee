@@ -5,7 +5,12 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const dynamic = "force-dynamic";
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage() {
+  // Use absolute URL for the logo (works in edge runtime)
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://psalmscoffee.vercel.app";
+  const logoUrl = `${baseUrl}/images/psalms-coffee-logo.png`;
+
   return new ImageResponse(
     (
       <div
@@ -59,7 +64,7 @@ export default function OpenGraphImage() {
             }}
           >
             <img
-              src="/images/psalms-coffee-logo.png"
+              src={logoUrl}
               alt="Psalms Coffee"
               style={{
                 width: 900,
