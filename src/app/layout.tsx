@@ -71,10 +71,10 @@ export const metadata: Metadata = {
       "Premium mobile coffee cart service for weddings, corporate events, and celebrations in the Salem Metro Area. Specialty espresso drinks, fast service, and elegant presentation.",
     images: [
       {
-        url: "/images/coffee cart placeholder.jpg",
+        url: "/images/logo cut.jpg",
         width: 1200,
         height: 630,
-        alt: "Psalms Coffee mobile coffee cart at a wedding event",
+        alt: "Psalms Coffee - Mobile Specialty Coffee Cart Logo",
       },
     ],
   },
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     title: "Psalms Coffee - Mobile Specialty Coffee Cart",
     description:
       "Premium mobile coffee cart service for weddings, corporate events, and celebrations in the Salem Metro Area.",
-    images: ["/images/coffee cart placeholder.jpg"],
+    images: ["/images/logo cut.jpg"],
   },
   robots: {
     index: true,
