@@ -26,7 +26,7 @@ const ivyProstoDisplay = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://psalmscoffee.com"), // Update with your actual domain
+  metadataBase: new URL("https://psalmscoffee.vercel.app"), // Update with your actual domain
   title: {
     default:
       "Psalms Coffee - Mobile Specialty Coffee Cart for Weddings & Events",
@@ -64,14 +64,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://psalmscoffee.com", // Update with your actual domain
+    url: "https://psalmscoffee.vercel.app", // Update with your actual domain
     siteName: "Psalms Coffee",
     title: "Psalms Coffee - Mobile Specialty Coffee Cart for Weddings & Events",
     description:
       "Premium mobile coffee cart service for weddings, corporate events, and celebrations in the Salem Metro Area. Specialty espresso drinks, fast service, and elegant presentation.",
     images: [
       {
-        url: "/images/espresso drink.jpg",
+        url: "https://psalmscoffee.vercel.app/images/espresso drink.jpg",
         width: 1200,
         height: 630,
         alt: "Premium espresso drinks served at weddings and events by Psalms Coffee mobile cart",
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     title: "Psalms Coffee - Mobile Specialty Coffee Cart",
     description:
       "Premium mobile coffee cart service for weddings, corporate events, and celebrations in the Salem Metro Area.",
-    images: ["/images/espresso drink.jpg"],
+    images: ["https://psalmscoffee.vercel.app/images/psalms coffee logo.jpg"],
   },
   robots: {
     index: true,
@@ -103,7 +103,7 @@ export const metadata: Metadata = {
     // bing: "your-bing-verification-code",
   },
   alternates: {
-    canonical: "https://psalmscoffee.com", // Update with your actual domain
+    canonical: "https://psalmscoffee.vercel.app", // Update with your actual domain
   },
 };
 
