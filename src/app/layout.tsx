@@ -71,7 +71,7 @@ export const metadata: Metadata = {
       "Premium mobile coffee cart service for weddings, corporate events, and celebrations in the Salem Metro Area. Specialty espresso drinks, fast service, and elegant presentation.",
     images: [
       {
-        url: "https://psalmscoffee.vercel.app/images/espresso drink.jpg",
+        url: "https://psalmscoffee.vercel.app/images/psalms coffee logo.jpg",
         width: 1200,
         height: 630,
         alt: "Premium espresso drinks served at weddings and events by Psalms Coffee mobile cart",
