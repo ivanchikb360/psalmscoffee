@@ -1,8 +1,43 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Location() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        form.reset();
+        // Scroll to top of form to show success message
+        form.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <section
       id="book"
@@ -249,6 +284,7 @@ export default function Location() {
               <form
                 action="https://formsubmit.co/ivanchikb360@gmail.com"
                 method="POST"
+                onSubmit={handleSubmit}
                 className="space-y-4 sm:space-y-5"
               >
                 {/* FormSubmit Configuration */}
@@ -258,8 +294,8 @@ export default function Location() {
                   value="New Booking Request - Psalms Coffee"
                 />
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="#book" />
                 <input type="hidden" name="_template" value="box" />
+                <input type="hidden" name="_next" value="" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
@@ -373,13 +409,38 @@ export default function Location() {
                   />
                 </div>
 
+                {submitStatus === "success" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="p-4 bg-green-50 border border-green-200 rounded-lg"
+                  >
+                    <p className="text-sm text-green-800 font-medium text-center">
+                      Thank you! We&apos;ve received your request and will get back to you within 24 hours.
+                    </p>
+                  </motion.div>
+                )}
+
+                {submitStatus === "error" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="p-4 bg-red-50 border border-red-200 rounded-lg"
+                  >
+                    <p className="text-sm text-red-800 font-medium text-center">
+                      Something went wrong. Please try again or call us directly.
+                    </p>
+                  </motion.div>
+                )}
+
                 <motion.button
                   type="submit"
-                  className="w-full px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 bg-amber-900 text-white hover:bg-amber-800 transition-all duration-300 font-medium text-sm sm:text-base md:text-lg tracking-wide shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 rounded-lg"
-                  whileHover={{ scale: 1.01 }}
-                  whileTap={{ scale: 0.99 }}
+                  disabled={isSubmitting}
+                  className="w-full px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 bg-amber-900 text-white hover:bg-amber-800 disabled:bg-amber-700 disabled:cursor-not-allowed transition-all duration-300 font-medium text-sm sm:text-base md:text-lg tracking-wide shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 rounded-lg"
+                  whileHover={!isSubmitting ? { scale: 1.01 } : {}}
+                  whileTap={!isSubmitting ? { scale: 0.99 } : {}}
                 >
-                  REQUEST A QUOTE
+                  {isSubmitting ? "SUBMITTING..." : "REQUEST A QUOTE"}
                 </motion.button>
 
                 <p className="text-xs sm:text-sm text-gray-500 text-center pt-2">
